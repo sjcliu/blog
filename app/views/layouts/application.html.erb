@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Stanly Liu - Develope &amp; Designer</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-    <header id="main_navigation" class="clearfix">
-        <a href="" class="name">Stanly Liu</a>
-        <nav>
-            <%= link_to "Articles", posts_path%>
-            <a href="#">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+    <head>
+        <title>Stanly Liu - Develope &amp; Designer</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <header id="main_navigation" class="clearfix">
+            <%= link_to "Stanly Liu", root_path, class: "name"%>
+            <nav>
+                <%= link_to "Articles", posts_path%>
+                <a href="#">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
 
+        <%= yield %>
 
-<%= yield %>
+        <footer id="main_footer">
+            <p class="copyright">&copy;2016 Stanly Liu</p>
+            <nav>
+                <a href="#" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a href="https://linkedin.com/in/sjcliu" target="_blank">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/sjcliu" target="_blank">
+                    <i class="fa fa-github"></i>
+                </a>
+            </nav>
+        </footer>
 
-</body>
+    </body>
 </html>
