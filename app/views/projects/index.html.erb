@@ -2,7 +2,7 @@
 
 <div id="posts_wrapper" class="skinny_wrapper">
     <% @projects.each do |project|%>
-    <div class="project">
+    <div class="post">
         <p class="date"><%= project.created_at.strftime('%A, %B %d') %></p>
         <h2>
             <a href="article_show.html"><%= link_to project.title, project %></a>
@@ -10,5 +10,3 @@
         <hr>
     </div>
     <% end %>
-
-    
